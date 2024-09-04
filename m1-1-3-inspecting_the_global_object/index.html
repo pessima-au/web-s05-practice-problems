@@ -7,29 +7,31 @@
     /*
     PROBLEM 1: Navigate to Google.com. Open the Chrome devtools and go to the console. Input 'window.' into the console and see that a bunch of methods pre-populate. What is the first property on the window object?
     */
-    //ENTER YOUR CODE HERE
+    console.log("The first property is 'IJ_values'.")
 
     /*
     PROBLEM 2: Write a script that will console log one of the widths of the global window object
     */
-    //ENTER YOUR CODE HERE
+    console.log(window.innerWidth)
 
     /*
    PROBLEM 3: Write a script that logs a boolean to check if the current window is the top-level window.
    */
-    //ENTER YOUR CODE HERE
+    let isTopLevelWindow = (window === window.top);
+    console.log(isTopLevelWindow);
 
     /*
     PROBLEM 4: Write a script that retrieves the URL of the current window and logs it to the console.
     */
-    //ENTER YOUR CODE HERE
+    let currentUrl = window.location.href;
+    console.log(currentUrl);
 
     /*
     PROBLEM 5 (DEBUGGING): The following code is intended to log the window's innerHeight and innerWidth properties. However, it is not producing the expected output.
     // Find and fix the bug to make it work correctly.
     */
-    console.log("Problem 5 Window Height: " + window.height);
-    console.log("Problem 5 Window Width: ", window.width);
+    console.log("Problem 5 Window Height: " + window.innerHeight);
+    console.log("Problem 5 Window Width: ", window.innerWidth);
 
   </script>
 </body>
