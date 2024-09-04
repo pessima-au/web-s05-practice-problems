@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html>
-
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+        .fire {
+          background-color: yellow;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="myDiv">This div should change color</div>
+      <button class="fire">Change Color</button>
+    </body>
+  </html>
 <body>
   <h1>Understanding the DOM</h1>
+  <h2>Hello, World</h2>
+  <button type="button">Push Me</button>
   <script>
     /*
     PROBLEM 1: Using the Elements panel of Chrome Dev tools, locate the h1 element and modify its text content to say "Hello, World!". If you refresh the page, does the heading change?
     */
-    //ENTER YOUR ANSWER HERE
+    //Yes the heading chages back to 'Understanding the DOM'.
 
     /*
-    PROBLEM 2: Create an h2 element that says "Hello, World" in the HTML above. Using the elements panel again, locate the h1 element and modify its content to say "I'm changing the DOM". If you refresh the page, does the h2 change?
-    */
-    //ENTER YOUR ANSWER HERE
+    PROBLEM 2: Create an h2 element that says "Hello, World" in the HTML above. Using the elements panel again, locate the h1 element and modify its content to say "I'm changing the DOM". If you refresh the page, does the h2 change?*/
+
+    //The h2 element is still 'Hello, World'.
 
      /*
     PROBLEM 3: Create a button element that says "Push me" in the HTML above. Using the Elements panel, locate the button element and add a class of "btn" to it. Style the button by adding custom CSS rules within the Styles panel. Does the button still have the styles after a page refresh? Explain your answer.
     */
-    //ENTER YOUR ANSWER HERE
+    //No. The styles all disappeared because they are present in the DevTools within the browser, so they do not affect the source code.
 
     /*
     PROBLEM 4: Open the Chrome DevTools on any webpage. Using the Elements panel, locate a paragraph element and modify its CSS properties, such as changing the font size, color, or adding a background color. Explain how we are able to make changes on the browser.
     */
-    //ENTER YOUR ANSWER HERE
+    //We are able to make changes in the browser by pressing 'F12' on Windows or right-clicking on a page and selecting 'inspect'. In the DevTools we can access the 'element' and 'console' tabs, in addition to several other tabs, which allo us to manipulate and play around with HTML and CSS prperties.
 
 
     /*
     PROBLEM 5 (DEBUGGING): The following code has two bugs that are throwing a Syntax error and a style is not being applied. Find the bugs and code them correctly above in the HTML.
-
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <style>
-          #.fire {
-            background-color: yellow;
-          }
-        </style>
-      </head>
-      <body>
-        <div id="myDiv">This div should change color</div>
-        <button class".fire">Change Color</button>
-      </body>
-    </html>
     */
-
   </script>
 </body>
 
