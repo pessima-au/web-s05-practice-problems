@@ -28,28 +28,33 @@
 
     PROBLEM 1: Select the element with the id "main-header" and print to the console
     */
-    //ENTER YOUR CODE HERE
+    let mainHeader = document.querySelector('#main-header');
+    console.log(mainHeader);
 
     /*
     PROBLEM 2: Print the first p element with a class name of "section-text".
     */
-    //ENTER YOUR CODE HERE
+    let firstPElement = document.querySelector('.section-text');
+    console.log(firstPElement);
 
     /*
     PROBLEM 3: Print the first h3 element
    */
-    //ENTER YOUR CODE HERE
+    let firstH3Element = document.querySelector('h3');
+    console.log(firstH3Element);
+
 
     /*
     PROBLEM 4: Print the code element of the first unordered list item in the main section
     */
-    //ENTER YOUR CODE HERE
+    let firstUnoderedItem = document.querySelector('.main ul li code');
+    console.log(firstUnoderedItem);
 
     /*
     PROBLEM 5 (DEBUGGING): There is a typo in the webpage. The code below is an attempt at removing the typo. Find and fix the issue(s) with the code.
     */
-    // const scribbles = document.querySelector('.section-text')
-    // scribbles.style.display = null
+    const scribbles = document.querySelector('.section-text');
+    scribbles.style.display = 'none';
 
   </script>
 
