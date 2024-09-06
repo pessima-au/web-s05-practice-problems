@@ -44,22 +44,34 @@
     /*
     PROBLEM 1: In the "recap" section, insert a p element with the text "List begins here" after the header and before the list items
     */
-    //ENTER YOUR CODE HERE
+   const pElement = document.createElement('p')
+   pElement.textContent = "List begins here"
+    document.querySelector("ol").insertAdjacentElement('beforebegin', pElement)
+
 
     /*
     PROBLEM 2: Add a list item to the existing ordered list containing a coding concept you have recently learned to the first position
     */
-    //ENTER YOUR CODE HERE
+    const newListItem = document.createElement('li');
+    newListItem.textContent = 'This is another list item';
+    document.querySelector('ol').insertAdjacentElement('beforeend', newListItem);
+
 
     /*
    PROBLEM 3: Add another list item to the ordered list containing another coding topic you have recently learned to the last position
    */
-    //ENTER YOUR CODE HERE
+    const anotherListItem = document.createElement('li');
+    anotherListItem.textContent = "For flexibility, use .insertAdjacentElement() to append elements "
+
+    document.querySelector('ol').insertAdjacentElement('beforeend', anotherListItem)
 
     /*
     PROBLEM 4: After the list items but before the p element, add a button with the text "Done"
     */
-    //ENTER YOUR CODE HERE
+    const buttonElement = document.createElement('button');
+    buttonElement.textContent = 'Done';
+
+    document.querySelector('ol').insertAdjacentElement('afterend', buttonElement);
 
     /*
     PROBLEM 5 (DEBUGGING): The code below attempts to add buttons at the beginning and end positions of the parent element div and then inserting into the DOM.
@@ -67,16 +79,20 @@
     */
 
     // UNCOMMENT THE CODE BELOW
-    /*
-     const section = document.querySelector('recap');
+    
+     const section = document.querySelector('.recap');
      const parentElement = document.createElement('div');
      const btn = document.createElement('button');
-     btn.innerHTML = 'click me';
+     btn.innerText = 'click me';
      btn.classList.add('btn');
-     parentElement.insertAdjacentElement('Beforebegin', btn);
-     parentElement.insertAdjacentElement('afterend', btn);
-     section.insertAdjacentElement('beforbegin', parentElement)
-    */
+
+     const btn2 = document.createElement('button')
+     btn2.innerText = 'click me'
+
+     parentElement.insertAdjacentElement('afterbegin', btn);
+     parentElement.insertAdjacentElement('beforeend', btn2);
+     section.insertAdjacentElement('beforebegin', parentElement)
+    
 
   </script>
 </body>

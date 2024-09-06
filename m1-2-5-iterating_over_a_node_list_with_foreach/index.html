@@ -32,43 +32,63 @@
     PROBLEM 1: Create a variable "headerElements" containing all h3 elements in the web page. Loop over headerElements using the forEach() method and log each element's text content.
     HINT: Use the innerText property to get the text content
     */
-    // ENTER CODE HERE
+      const headerElements = document.querySelectorAll('h3');
+      headerElements.forEach((header, headerIndex) => {
+        console.log('This is index:', headerIndex);
+        console.log(header.innerText)
+      })
 
     /*
     PROBLEM 2: Use the forEach() method to print all but the second h3 element in headerElements.
     */
-   // ENTER CODE HERE
+   headerElements.forEach((header, index) => {
+    if (index === 1)
+    console.log(header)
+   })
 
     /*
     PROBLEM 3: Create an array of the text content of all h3 elements (Use the forEach() method). Log the created array to the console.
     */
-   // ENTER CODE HERE
+    let h3Elements = document.querySelectorAll('h3');
+
+      let array = [];
+    h3Elements.forEach((element) => {
+      array.push(element.innerText.split(' '));
+    })
+
+    console.log(array);
+
+  
 
     /*
     PROBLEM 4: Using the forEach() method, print to the console a p followed the index of each p tag followed by the first 10 characters of its text content. For example 'p0 All your s' is the first p tag followed by the first 10 characters of its text content.
     */
-    // ENTER CODE HERE
+    let paragraphs = document.querySelectorAll('p');
+    paragraphs.forEach((element, pIndex) => {
+      console.log(`p${pIndex} ${element.textContent.slice(0, 10)}`)
+    })
 
     /*
     PROBLEM 5 (DEBUGGING): The code below is an attempt at adding an emoji from the list of emojis to the end of each page section. Fix the issue(s) with the code.
     */
     //UNCOMMENT CODE BELOW
-    /*  ==>
-    // function to create p (emoji) element
+     
+    //function to create p (emoji) element
     const createEmojiElement = (index, emojiList) => {
       const emojiElement = document.createElement('p');
       emojiElement.style.margin = '10px 0'
-      emojiElement.innerText = emojiList[ index ]
+      emojiElement.innerText = emojiList[index];
+      return emojiElement;
     }
 
     // list of emojis to add to page
     const emojiList = [ '😂', '😭' ];
 
     const pageSections = document.querySelectorAll('section');
-    pageSections.forEach(section => {
-      section.appendChild(emojiElement)
+    pageSections.forEach((section, index) => {
+      section.appendChild(createEmojiElement(index, emojiList))
     })
-     <== */
+     
 
   </script>
 </body>

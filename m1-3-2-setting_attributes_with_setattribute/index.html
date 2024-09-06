@@ -10,29 +10,34 @@
     PROBLEM 1: Write a code snippet that sets the attribute 'src' on the imageElement below to this placeholder image link: https://place-hold.it/400x400.
     */
     let imageElement = document.createElement('img');
-    // ENTER YOUR CODE HERE
+    
+    imageElement.setAttribute('src', 'https://place-hold.it/400x400');
 
     /*
     PROBLEM 2: Write a code snippet that sets the attribute 'href' on the element with an ID of 'link-element' to this mock URL address: http://www.example.com.
     */
-    // ENTER YOUR CODE HERE
+    let hrefElement = document.querySelector('#link-element');
+
+    hrefElement.setAttribute('src', 'http://www.example.com');
 
     /*
     PROBLEM 3: Write a code snippet that sets the attribute 'role' of the element with an ID of 'div-element' to 'button'. You can assume there is a div with this ID name.
     */
-    // ENTER YOUR CODE HERE
+    let buttonElement  = document.querySelector('#div-element');
+    buttonElement.setAttribute('role', 'button')
 
     /*
     PROBLEM 4: Write a code snippet that sets the 'src' attribute on an element called "newImageElement" using the 'attrName' pattern instead of the setAttribute method. You will need to create "newImageElement" first using the document's createElement() method.
     */
-    // ENTER YOUR CODE HERE
+    let newImageElement = document.createElement('img');
+    newImageElement.src = 'image/guana';
 
 
     /*
     PROBLEM 5 (DEBUGGING): There is an error in this code snippet. Find and fix it.
     */
-    // let newDivElement = document.createElement('div');
-    // newDivElement.setAttribute('style', 'width: 50px');
+    let newDivElement = document.createElement('div');
+    newDivElement.style.width = '50px';
 
   </script>
 </body>

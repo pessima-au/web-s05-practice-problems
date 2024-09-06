@@ -9,25 +9,36 @@
     /*
     PROBLEM 1: Add an inline style to the appropriate element to make all the content of the body to Verdana, or Geneva if Verdana is unavailabe, Tahoma if Verdana and Geneva aren't available, and finally sans-serif if the first three choices are not available.
     */
-    //ENTER YOUR CODE IN THE APPROPRIATE ELEMENT
+    const imaginaryElement = document.querySelector('h1');
+    imaginaryElement.style.cssText = 'font-family: Verdana, Geneva, Tahoma, sans-serif';
 
     /*
     PROBLEM 2: Add the appropriate inline style to the appropriate element to center the heading one text and make it blue.
     */
-    //ENTER YOUR CODE IN THE APPROPRIATE ELEMENT
+    // imaginaryElement.style.textAlign = 'center';
+    // imaginaryElement.style.color = 'blue'
+    imaginaryElement.style.cssText = 'text-align: center; color: blue'
 
      /*
     PROBLEM 3: Add the appropriate inline style to the first paragraph element to have the left margin 100px and the right margin 90px.
     */
-    //ENTER YOUR CODE IN THE APPROPRIATE ELEMENT
+    let firstParagraph = document.querySelector('p');
+    firstParagraph.style.cssText = 'margin-left: 100px; margin-right: 90px';
     /*
     PROBLEM 4: Modify the section element's inline style to include a 50px margin and a " dimgray " background color. Modify the last heading element to have inline style color red, background color white, margin 35px, and text align center.
     */
-    //ENTER YOUR CODE IN THE APPROPRIATE ELEMENT
+    let sectionElement = document.querySelector('section');
+    sectionElement.style.cssText = 'margin: 50px; background-color: dimgary'
 
+   let headings = document.querySelectorAll('h1');
+   if (headings.length > 0){ 
+   let lastHeadingElement = headings[headings.length -1];
+    lastHeadingElement.style.cssText = 'color: red; background-color: white; margin: 35px; text-align: center'
+}
     /*
     PROBLEM 5 (DEBUGGING): How could you test the effect of your font choices in the body element? What could you do to see the page in Geneva or Tahoma or sans-serif?
     */
+     //Ans: I could go to the DevTools and get to the style tab and deactivate the fonts to see which ones kick in.
 
   </script>
 </body>
